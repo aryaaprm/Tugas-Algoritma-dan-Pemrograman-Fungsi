@@ -1,0 +1,225 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define phi 3.14
+
+float kl_persegi (float s){
+	float kl_persegi=4*s;
+	return kl_persegi;
+}
+float l_persegi (float s){
+	float l_persegi=s*s;
+	return l_persegi;
+}
+
+float kl_persegi_panjang (float p, float l){
+	float kl_persegi_panjang=(2*p)+(2*l);
+	return kl_persegi_panjang;
+}
+float l_persegi_panjang (float p, float l){
+	float l_persegi_panjang=p*l;
+	return l_persegi_panjang;
+}
+
+float kl_lingkaran (float r){
+	float kl_lingkaran=2*phi*r;
+	return kl_lingkaran;
+}
+float l_lingkaran (float r){
+	float l_lingkaran=phi*r*r;
+	return l_lingkaran;
+}
+
+float l_trapesium (float a, float b, float t){
+	float l_trapesium=(a+b)*t/2;
+	return l_trapesium;
+}
+float kl_trapesium (float a, float b, float c, float d){
+	float kl_trapesium=a+b+c+d;
+	return kl_trapesium;
+}
+
+float l_jajar_genjang (float g, float i){
+	float l_jajar_genjang=g*i;
+	return l_jajar_genjang;
+}
+float kl_jajar_genjang (float g, float h){
+	float kl_jajar_genjang=2*(g+h);
+	return kl_jajar_genjang;
+}
+	
+int main()
+{
+	int pilihan;
+	int kembali;
+	menu:
+		printf("=======================================================\n");
+		printf("Program Menghitung Keliling dan Luas Bangun Datar\n");
+		printf("=======================================================\n");
+		printf("Menu Pilihan:\n");
+		printf("1. Persegi\n");
+		printf("2. Persegi Panjang\n");	
+		printf("3. Lingkaran\n");	
+		printf("4. Trapesium\n");	
+		printf("5. Jajar Genjang\n");
+		printf("6. Keluar Program\n");
+		printf("=======================================================\n");
+		printf("Masukan pilihan (1/2/3/4/5): ");
+		scanf("%d", &pilihan);
+		switch(pilihan){
+			case 1:
+				system ("cls");
+				printf("=======================================================\n");
+				printf("Program Menghitung Keliling dan Luas Persegi\n");
+				printf("=======================================================\n");
+				float s;
+				printf("Masukan sisi persegi (dalam cm)= ");
+				scanf("%f", &s);
+				printf("=======================================================");
+				printf("\nKeliling persegi adalah = %f cm \n", kl_persegi(s));
+				printf("Luas persegi adalah     = %f cm2 \n", l_persegi(s));
+				printf("=======================================================\n");
+				printf("Masukan (1) untuk kembali ke menu\n");
+				printf("Masukan (0) untuk keluar dari program\n");
+				printf("Masukan pilihan anda: ");
+				scanf("%d", &kembali);
+				if (kembali ==1){
+					system ("cls");
+					goto menu;
+				} else{
+				system ("cls");
+				printf("=======================================================\n");
+				printf("Terima kasih telah menggunakan program ini!\n");
+				printf("=======================================================");
+				}
+				break;
+			case 2:
+				system ("cls");
+				printf("=======================================================\n");
+				printf("Program Menghitung Keliling dan Luas Persegi Panjang\n");
+				printf("=======================================================\n");
+				float p,l;
+				printf("Masukan panjang persegi panjang (dalam cm)= ");
+				scanf("%f", &p);
+				printf("Masukan lebar persegi panjang (dalam cm)= ");
+				scanf("%f", &l);
+				printf("=======================================================");
+				printf("\nKeliling persegi panjang adalah = %f cm \n", kl_persegi_panjang(p,l));
+				printf("Luas persegi panjang adalah     = %f cm2 \n", l_persegi_panjang(p,l));
+				printf("=======================================================\n");
+				printf("Masukan (1) untuk kembali ke menu\n");
+				printf("Masukan (0) untuk keluar dari program\n");
+				printf("Masukan pilihan anda: ");
+				scanf("%d", &kembali);
+				if (kembali ==1){
+					system ("cls");
+					goto menu;
+				} else{
+				system ("cls");
+				printf("=======================================================\n");
+				printf("Terima kasih telah menggunakan program ini!\n");
+				printf("=======================================================");
+				}
+				break;
+			case 3:
+				system ("cls");				
+				printf("=======================================================\n");
+				printf("Program Menghitung Keliling dan Luas Lingkaran\n");
+				printf("=======================================================\n");
+				float r;
+				printf("Masukan jari - jari lingkaran (dalam cm)= ");
+				scanf("%f", &r);
+				printf("=======================================================");
+				printf("\nKeliling lingkaran adalah = %f cm \n", kl_lingkaran(r));
+				printf("Luas lingkaran adalah     = %f cm2 \n", l_lingkaran(r));
+				printf("=======================================================\n");
+				printf("Masukan (1) untuk kembali ke menu\n");
+				printf("Masukan (0) untuk keluar dari program\n");
+				printf("Masukan pilihan anda: ");
+				scanf("%d", &kembali);
+				if (kembali ==1){
+					system ("cls");
+					goto menu;
+				} else{
+				system ("cls");
+				printf("=======================================================\n");
+				printf("Terima kasih telah menggunakan program ini!\n");
+				printf("=======================================================");
+				}
+				break;
+			case 4:
+				system ("cls");				
+				printf("=======================================================\n");
+				printf("Program Menghitung Keliling dan Luas Trapesium\n");
+				printf("=======================================================\n");
+				float a,b,c,d,t;
+				printf("Masukan alas 1 trapesium (dalam cm)= ");
+				scanf("%f", &a);
+				printf("Masukan alas 2 trapesium (dalam cm)= ");
+				scanf("%f", &b);
+				printf("Masukan sisi miring 1 trapesium (dalam cm)= ");
+				scanf("%f", &c);
+				printf("Masukan sisi miring 2 trapesium (dalam cm)= ");
+				scanf("%f", &d);
+				printf("Masukan tinggi trapesium (dalam cm)= ");
+				scanf("%f", &t);
+				printf("=======================================================");
+				printf("\nKeliling trapesium adalah = %f cm \n", kl_trapesium(a,b,c,d));
+				printf("Luas trapesium adalah     = %f cm2 \n", l_trapesium(a,b,t));
+				printf("=======================================================\n");
+				printf("Masukan (1) untuk kembali ke menu\n");
+				printf("Masukan (0) untuk keluar dari program\n");
+				printf("Masukan pilihan anda: ");
+				scanf("%d", &kembali);
+				if (kembali ==1){
+					system ("cls");
+					goto menu;
+				} else{
+				system ("cls");
+				printf("=======================================================\n");
+				printf("Terima kasih telah menggunakan program ini!\n");
+				printf("=======================================================");
+				}
+				break;
+			case 5:
+				system ("cls");				
+				printf("=======================================================\n");
+				printf("Program Menghitung Keliling dan Luas Jajar Genjang\n");
+				printf("=======================================================\n");
+				float g,h,i;
+				printf("Masukan alas jajar genjang (dalam cm)= ");
+				scanf("%f", &g);
+				printf("Masukan sisi miring jajar genjang (dalam cm)= ");
+				scanf("%f", &h);
+				printf("Masukan tinggi jajar genjang (dalam cm)= ");
+				scanf("%f", &i);
+				printf("=======================================================");
+				printf("\nKeliling jajar genjang adalah = %f cm \n", kl_jajar_genjang(g,h));
+				printf("Luas jajar genjang adalah     = %f cm2 \n", l_jajar_genjang(g,i));
+				printf("=======================================================\n");
+				printf("Masukan (1) untuk kembali ke menu\n");
+				printf("Masukan (0) untuk keluar dari program\n");
+				printf("Masukan pilihan anda: ");
+				scanf("%d", &kembali);
+				if (kembali ==1){
+					system ("cls");
+					goto menu;
+				} else{
+				system ("cls");
+				printf("=======================================================\n");
+				printf("Terima kasih telah menggunakan program ini!\n");
+				printf("=======================================================");
+				}
+				break;
+			case 6:
+				system ("cls");
+				printf("=======================================================\n");
+				printf("Terima kasih telah menggunakan program ini!\n");
+				printf("=======================================================");
+				break;
+			default:
+				printf("Tidak dapat memproses pilihan");
+		}
+
+	return 0;
+	
+} 
