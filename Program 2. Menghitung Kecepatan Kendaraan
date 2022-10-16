@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+float v(float s, float t){
+	float v=s/t;
+	return v;
+}
+
+int main ()
+{
+	printf("==============================================\n");
+	printf("Program Menghitung Kecepatan Kendaraan\n");
+	printf("==============================================\n");
+	
+	float s,t;
+	
+	printf("Jarak Berkendara (dalam satuan km) = ");
+	scanf("%f", &s);
+	
+	printf("Waktu Tempuh (dalam satuan jam) =  ");
+	scanf("%f", &t);
+	
+	printf("Kecepatan Kendaraan Anda Adalah = %f km/jam", v(s,t));
+	
+	return 0;
+}
